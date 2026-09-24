@@ -1,0 +1,27 @@
+# Data: large and licensed, not ours to redistribute
+data/
+*.jpg
+*.jpeg
+*.png.dcm
+archive.zip
+
+# Model weights and optimiser state
+*.pt
+*.pth
+checkpoints/
+checkpoints_v1/
+original_split_with_recovered_images/checkpoints/
+
+# Environment and caches
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+.env
+
+# OS and editor
+.DS_Store
+Thumbs.db
+.vscode/
+

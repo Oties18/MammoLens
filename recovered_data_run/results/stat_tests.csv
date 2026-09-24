@@ -1,0 +1,57 @@
+section,analysis,stratum,metric,value,ci_low,ci_high,note
+5.6.1,prediction check,test,rows,430.0,,,
+5.6.1,prediction check,test,malignant,199.0,,,
+5.6.1,prediction check,test,AUC recomputed,0.6626748460919316,,,
+5.6.1,prediction check,test,TN at 0.5,131.0,,,
+5.6.1,prediction check,test,FP at 0.5,100.0,,,
+5.6.1,prediction check,test,FN at 0.5,69.0,,,
+5.6.1,prediction check,test,TP at 0.5,130.0,,,
+5.6.2,discrimination by split,train,AUC,0.8960120183933383,,,
+5.6.2,discrimination by split,val,AUC,0.7497976829372177,,,
+5.6.2,discrimination by split,test,AUC,0.6626748460919316,,,
+5.6.2,discrimination by split,train minus val,AUC difference,0.14621433545612061,,,
+5.6.5,storage timing,Drive-mounted path,s per image,0.18878159632499775,,,/content/drive/MyDrive/MammoLens/data
+5.6.5,storage timing,Drive-mounted path,projected s per epoch (single process),416.829764685595,,,2208 images per epoch
+5.6.5,storage timing,local session copy,s per image,0.1828112849900026,,,/content/data
+5.6.5,storage timing,local session copy,projected s per epoch (single process),403.64731725792575,,,2208 images per epoch
+5.7.1,bootstrap 95% CI (image-level),all,AUC,0.6626748460919316,0.6109340982737049,0.7113872793717327,"2000 resamples, seed 42, threshold 0.5"
+5.7.1,bootstrap 95% CI (patient-level),all,AUC,0.6626748460919316,0.6043422952238622,0.719093886202737,"2000 resamples, seed 42, threshold 0.5"
+5.7.1,bootstrap 95% CI (image-level),all,sensitivity,0.6532663316582915,0.5853593668915412,0.7183169367966593,"2000 resamples, seed 42, threshold 0.5"
+5.7.1,bootstrap 95% CI (patient-level),all,sensitivity,0.6532663316582915,0.5860458864716179,0.7225195687107977,"2000 resamples, seed 42, threshold 0.5"
+5.7.1,bootstrap 95% CI (image-level),all,specificity,0.5670995670995671,0.5042725988700565,0.6331914119359534,"2000 resamples, seed 42, threshold 0.5"
+5.7.1,bootstrap 95% CI (patient-level),all,specificity,0.5670995670995671,0.49098685841805106,0.6383068120865367,"2000 resamples, seed 42, threshold 0.5"
+5.7.1,bootstrap 95% CI (image-level),non-dense (A/B),AUC,0.707057505601195,0.6375564902901858,0.7747096776396176,"2000 resamples, seed 42, threshold 0.5"
+5.7.1,bootstrap 95% CI (patient-level),non-dense (A/B),AUC,0.707057505601195,0.6131072999495515,0.783179574529708,"2000 resamples, seed 42, threshold 0.5"
+5.7.1,bootstrap 95% CI (image-level),non-dense (A/B),sensitivity,0.6730769230769231,0.5851013649136892,0.7596153846153846,"2000 resamples, seed 42, threshold 0.5"
+5.7.1,bootstrap 95% CI (patient-level),non-dense (A/B),sensitivity,0.6730769230769231,0.5773195876288659,0.7666747572815534,"2000 resamples, seed 42, threshold 0.5"
+5.7.1,bootstrap 95% CI (image-level),non-dense (A/B),specificity,0.6310679611650486,0.5363636363636364,0.7238265306122448,"2000 resamples, seed 42, threshold 0.5"
+5.7.1,bootstrap 95% CI (patient-level),non-dense (A/B),specificity,0.6310679611650486,0.5046428571428572,0.7364011473962928,"2000 resamples, seed 42, threshold 0.5"
+5.7.1,bootstrap 95% CI (image-level),dense (C/D),AUC,0.6320312499999999,0.5551615317776545,0.7015323547138844,"2000 resamples, seed 42, threshold 0.5"
+5.7.1,bootstrap 95% CI (patient-level),dense (C/D),AUC,0.6320312499999999,0.5461485443842085,0.7092930408880928,"2000 resamples, seed 42, threshold 0.5"
+5.7.1,bootstrap 95% CI (image-level),dense (C/D),sensitivity,0.631578947368421,0.530599950823703,0.7272727272727273,"2000 resamples, seed 42, threshold 0.5"
+5.7.1,bootstrap 95% CI (patient-level),dense (C/D),sensitivity,0.631578947368421,0.534639401440144,0.7241467276565798,"2000 resamples, seed 42, threshold 0.5"
+5.7.1,bootstrap 95% CI (image-level),dense (C/D),specificity,0.515625,0.42621206836414366,0.6017288782507437,"2000 resamples, seed 42, threshold 0.5"
+5.7.1,bootstrap 95% CI (patient-level),dense (C/D),specificity,0.515625,0.42605978260869565,0.6087038247793396,"2000 resamples, seed 42, threshold 0.5"
+5.7.2,AUC gap: image-level bootstrap (primary),A/B minus C/D,difference,0.07502625560119502,-0.02570999186826624,0.17841752938456168,
+5.7.2,AUC gap: image-level bootstrap (primary),A/B minus C/D,SE A/B,0.03584549315921126,,,
+5.7.2,AUC gap: image-level bootstrap (primary),A/B minus C/D,SE C/D,0.0381557596738082,,,
+5.7.2,AUC gap: image-level bootstrap (primary),A/B minus C/D,z,1.4331038396201208,,,
+5.7.2,AUC gap: image-level bootstrap (primary),A/B minus C/D,p two-sided,0.15182816432892812,,,
+5.7.2,AUC gap: patient-level bootstrap,A/B minus C/D,difference,0.07502625560119502,-0.04457867422643479,0.18694568858429042,
+5.7.2,AUC gap: patient-level bootstrap,A/B minus C/D,SE A/B,0.04269950041209307,,,
+5.7.2,AUC gap: patient-level bootstrap,A/B minus C/D,SE C/D,0.04120960296153587,,,
+5.7.2,AUC gap: patient-level bootstrap,A/B minus C/D,z,1.264301748727124,,,
+5.7.2,AUC gap: patient-level bootstrap,A/B minus C/D,p two-sided,0.20612174217523116,,,
+5.7.2,AUC gap: Hanley-McNeil SE (normal CI),A/B minus C/D,difference,0.07502625560119502,-0.027398592329897595,0.17745110353228766,
+5.7.2,AUC gap: Hanley-McNeil SE (normal CI),A/B minus C/D,SE A/B,0.0358815218747555,,,
+5.7.2,AUC gap: Hanley-McNeil SE (normal CI),A/B minus C/D,SE C/D,0.03799171728787347,,,
+5.7.2,AUC gap: Hanley-McNeil SE (normal CI),A/B minus C/D,z,1.4357010427515853,,,
+5.7.2,AUC gap: Hanley-McNeil SE (normal CI),A/B minus C/D,p two-sided,0.1510874284009497,,,
+5.7.3,operating point (test-fitted),all,sensitivity at spec >= 0.80,0.40703517587939697,,,threshold 0.863134; achieved specificity 0.8009
+5.7.3,operating point (validation-fitted),all,sensitivity at spec >= 0.80,0.40703517587939697,,,threshold 0.853944; achieved specificity 0.7922
+5.7.3,operating point (test-fitted),non-dense (A/B),sensitivity at spec >= 0.80,0.4326923076923077,,,threshold 0.812414; achieved specificity 0.8058
+5.7.3,operating point (validation-fitted),non-dense (A/B),sensitivity at spec >= 0.80,0.5,,,threshold 0.742226; achieved specificity 0.7767
+5.7.3,operating point (test-fitted),dense (C/D),sensitivity at spec >= 0.80,0.35789473684210527,,,threshold 0.899993; achieved specificity 0.8047
+5.7.3,operating point (validation-fitted),dense (C/D),sensitivity at spec >= 0.80,0.30526315789473685,,,threshold 0.926179; achieved specificity 0.8516
+5.7.4,calibration (10 equal-width bins),non-dense (A/B),ECE,0.18351490861201936,,,
+5.7.4,calibration (10 equal-width bins),dense (C/D),ECE,0.2892826534134978,,,

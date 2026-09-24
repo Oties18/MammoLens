@@ -1,0 +1,48 @@
+{
+  "created_utc": "2026-09-22T17:19:04Z",
+  "source": "v1 run (pre-rebuild)",
+  "files": {
+    "initial_run/results/fig_density_stratified.png": {
+      "bytes": 55199,
+      "md5": "2d254076bd55cdee90b73e080425d16b"
+    },
+    "initial_run/results/gradcam_gallery.png": {
+      "bytes": 1186072,
+      "md5": "3facc5f051322753ba4a191148aa3ae2"
+    },
+    "initial_run/results/test_metrics.csv": {
+      "bytes": 807,
+      "md5": "cfa67eced07d19971ae2f310103c19bc"
+    },
+    "initial_run/results/test_metrics.json": {
+      "bytes": 1849,
+      "md5": "4cb218ef2a69e8c08808dfe332b5eb57"
+    },
+    "initial_run/checkpoints/best_model.pt": {
+      "bytes": 48598456,
+      "md5": "14eb1ee4d1806a4cf19e7eb11cca08aa"
+    },
+    "initial_run/checkpoints/last_checkpoint.pt": {
+      "bytes": 48603481,
+      "md5": "b9d891895d63ba554997499caca41254"
+    },
+    "initial_run/manifests/train.csv": {
+      "bytes": 188301,
+      "md5": "c9d431fef41ad1d815063cd7814e1d80"
+    },
+    "initial_run/manifests/val.csv": {
+      "bytes": 37195,
+      "md5": "3202f56ad24b1efe8fcc908ca61a9199"
+    },
+    "initial_run/manifests/test.csv": {
+      "bytes": 36749,
+      "md5": "68c79570694cd3efc9e03248b47b6d53"
+    }
+  },
+  "renamed_on": "2026-09-23",
+  "renamed_from": {
+    "results_v1": "initial_run/results",
+    "checkpoints_v1": "initial_run/checkpoints",
+    "manifests_v1": "initial_run/manifests"
+  }
+}
