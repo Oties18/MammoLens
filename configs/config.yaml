@@ -1,0 +1,51 @@
+# MammoLens configuration
+# Single source of truth for paths + hyperparameters.
+# Everything that might change between runs lives here, so the
+# notebook and src/ modules stay free of hard-coded values.
+
+project:
+  name: MammoLens
+  seed: 42                     # fixed seed for reproducible splits/runs
+
+# All paths assume Google Drive is mounted at /content/drive.
+# Adjust the subfolders to match where you uploaded the data.
+paths:
+  drive_root: /content/drive/MyDrive/MammoLens
+  data_dir: /content/drive/MyDrive/MammoLens/data        # images live here
+  train_csv: /content/drive/MyDrive/MammoLens/data/train.csv
+  val_csv: /content/drive/MyDrive/MammoLens/data/val.csv
+  test_csv: /content/drive/MyDrive/MammoLens/data/test.csv
+  checkpoint_dir: /content/drive/MyDrive/MammoLens/checkpoints
+  log_dir: /content/drive/MyDrive/MammoLens/logs
+
+# Model definition. timm gives us pretrained EfficientNet-B0 weights.
+model:
+  name: efficientnet_b0
+  pretrained: true
+  num_classes: 2              # benign vs malignant (binary)
+  drop_rate: 0.3              # dropout before the classifier head
+
+# Data pipeline.
+data:
+  image_size: 224             # EfficientNet-B0's native input resolution
+  num_workers: 2              # Colab typically gives 2 vCPUs
+  label_column: label
+  path_column: image_path
+
+# Training hyperparameters.
+train:
+  batch_size: 32
+  learning_rate: 0.0003       # 3e-4, a safe default for fine-tuning
+  weight_decay: 0.0001
+  epochs: 12                  # modest start; fits a single Colab session
+  optimizer: adamw
+  scheduler: cosine           # cosine annealing over all epochs
+  mixed_precision: true       # AMP: faster + less VRAM on Colab GPUs
+  early_stopping_patience: 5
+  use_class_weights: false    # 55/45 imbalance is mild; plain CE is preferred
+                              # (weighting hurts calibration for little recall gain)
+
+# Evaluation.
+evaluate:
+  metrics: [accuracy, auc, sensitivity, specificity]
+  positive_class: 1           # index treated as "malignant"
